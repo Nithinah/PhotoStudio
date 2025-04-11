@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PhotoStudio Portfolio</title>
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #fff;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #000;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ff69b4;
+    }
+
+    section {
+      padding: 4rem 2rem;
+    }
+
+    .hero {
+      background-image: url('https://source.unsplash.com/featured/?wedding');
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero-overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 5rem 2rem;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+    }
+
+    .button {
+      margin-top: 1rem;
+      background-color: #ff69b4;
+      color: white;
+      padding: 0.6rem 1.5rem;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background-color: #e058a1;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .section-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      gap: 2rem;
+    }
+
+    .services-grid, .packages-grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .portfolio-grid {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .portfolio-img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    footer {
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+      }
+
+      .hero h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>PhotoStudio</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#package">Package</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-overlay">
+      <h2 data-aos="fade-up">Capturing Moments, Creating Memories</h2>
+      <p data-aos="fade-up" data-aos-delay="200">Professional Wedding and Portrait Photography</p>
+      <button class="button" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});" data-aos="zoom-in" data-aos-delay="400">Book Now</button>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title" data-aos="fade-right">About Us</h2>
+    <p class="section-content" data-aos="fade-up">
+      We are a passionate team of photographers with over 10 years of experience capturing weddings, engagements, and family portraits. Our mission is to turn your moments into timeless art.
+    </p>
+  </section>
+
+  <section id="services" style="background: #f9f9f9;">
+    <h2 class="section-title" data-aos="fade-up">Services</h2>
+    <div class="grid services-grid">
+      <div class="card" data-aos="fade-up">
+        <h3>Wedding Photography</h3>
+        <p>Capture every magical moment of your big day.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="100">
+        <h3>Couple Portraits</h3>
+        <p>Celebrate your love with artistic couple portraits.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="200">
+        <h3>Event Coverage</h3>
+        <p>Complete photography coverage for birthdays, parties, and more.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h2 class="section-title" data-aos="fade-up">Portfolio</h2>
+    <div class="grid portfolio-grid">
+      <img class="portfolio-img" src="D:\\photography-portfolio\\photography-portfolio\\public\\home.png" alt="Portfolio 1" data-aos="zoom-in">
+      <img class="portfolio-img" src="images/couple.jpg" alt="Portfolio 2" data-aos="zoom-in" data-aos-delay="100">
+      <img class="portfolio-img" src="images/event.jpg" alt="Portfolio 3" data-aos="zoom-in" data-aos-delay="200">
+      <img class="portfolio-img" src="images/engagement.jpg" alt="Portfolio 4" data-aos="zoom-in" data-aos-delay="300">
+    </div>
+  </section>
+  
+
+  <section id="package" style="background: #f9f9f9;">
+    <h2 class="section-title" data-aos="fade-up">Packages</h2>
+    <div class="grid packages-grid">
+      <div class="card" data-aos="fade-up">
+        <h3>Basic</h3>
+        <p>Up to 3 hours of photography, 30 edited photos</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="100">
+        <h3>Standard</h3>
+        <p>Up to 6 hours, 60 edited photos + Album</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="200">
+        <h3>Premium</h3>
+        <p>Full-day coverage, 100+ photos, album & framed prints</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title" data-aos="fade-up">Contact Us</h2>
+    <form class="section-content" data-aos="fade-up" data-aos-delay="100">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button class="button" type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 PhotoStudio. All rights reserved.</p>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+</body>
+</html>
